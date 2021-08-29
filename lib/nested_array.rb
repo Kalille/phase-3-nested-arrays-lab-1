@@ -1,5 +1,5 @@
 # Examples inspired by U. S. National Organic Standards
-
+require'pry'
 ORGANIC_PRODUCE = [
   "Strawberries",
   "Potatoes",
@@ -17,6 +17,8 @@ CONVENTIONAL_PRODUCE = [
 ]
 
 def assembled_matrix
+newArr =[CONVENTIONAL_PRODUCE ,ORGANIC_PRODUCE]
+newArr
   # Build an array that contains both of the above arrays
   # This matrix will represent a produce storage room
   # Organic standards require that organic products be stored ABOVE conventional, not the other way around
@@ -24,9 +26,14 @@ def assembled_matrix
 end
 
 def sorted_matrix
+  newArr =assembled_matrix
+  assembled_matrix[0].sort + assembled_matrix[1].sort
+  
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
   # However, this time, sort each internal array alphabetically by the first character
+  assembled_matrix
+
 end
 
 def matrix_lookup(matrix, row, column)
