@@ -27,7 +27,10 @@ end
 
 def sorted_matrix
   
-  assembled_matrix[0].sort 
+  assembled_matrix.map do |array| 
+    array.sort
+  
+  end
   
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
@@ -39,10 +42,19 @@ end
 def matrix_lookup(matrix, row, column)
   # Given any matrix (array of arrays), a row index and a column index, 
   # Return the matrix's content at that row and and column
+  matrix[row][column]
 end
 
 def matrix_update(matrix, row, column, new_value)
   # Given any matrix (array of arrays), a row index and a column index, 
   # Update the matrix location at that row and column to have the value of new_value
   # Return the updated matrix
+
+  newArr = matrix
+
+
+  newArr[row][column]=new_value
+
+newArr
+ 
 end
